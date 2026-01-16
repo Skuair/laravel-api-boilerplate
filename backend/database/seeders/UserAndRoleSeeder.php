@@ -16,24 +16,15 @@ class UserAndRoleSeeder extends Seeder
     public function run(): void
     {
         User::factory()->create([
-            'name' => 'Hiren Admin',
-            'email' => 'hello@hirenkavad.com',
-            'password' => Hash::make('Hiren@123'),
-        ]);
-
-        User::factory()->create([
-            'name' => 'Hiren User',
-            'email' => 'hirenkavad@gmail.com',
-            'password' => Hash::make('Hiren@123'),
+            'name' => 'Admin user',
+            'email' => 'admin@example.org',
+            'password' => Hash::make('admin'),
         ]);
 
         Role::create(['name' => EnumsRole::ADMIN]);
         Role::create(['name' => EnumsRole::USER]);
 
-        $user = User::where('email', 'hello@hirenkavad.com')->first();
+        $user = User::where('email', 'admin@example.org')->first();
         $user->assignRole(EnumsRole::ADMIN);
-
-        $user = User::where('email', 'hirenkavad@gmail.com')->first();
-        $user->assignRole(EnumsRole::USER);
     }
 }

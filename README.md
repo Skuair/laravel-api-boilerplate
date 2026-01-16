@@ -4,51 +4,51 @@ This is a Best Laravel API boilerplate project with pre-configured authenticatio
 
 ## Features
 
-- Laravel 11.x
-- User Authentication (Laravel Sanctum)
-- Role-based Authorization (Spatie Laravel-permission)
-- Google OAuth Integration
-- API Routes for User Management
-- Database Migrations and Seeders
-- Docker Configuration
+-   Laravel 12.x
+-   User Authentication (Laravel Sanctum)
+-   Role-based Authorization (Spatie Laravel-permission)
+-   Google OAuth Integration
+-   API Routes for User Management
+-   Database Migrations and Seeders
+-   Docker Configuration
 
 ## Requirements
 
-- PHP 8.2+
-- Composer
-- Docker (optional)
+-   PHP 8.2+
+-   Composer
+-   Docker (optional)
 
 ## Installation
 
 1. Clone the repository:
 
-   ```
-   git clone git@github.com:hironate/laravel-api-boilerplate.git
-   cd laravel-api-boilerplate
-   ```
+    ```
+    git clone git@github.com:hironate/laravel-api-boilerplate.git
+    cd laravel-api-boilerplate
+    ```
 
 2. Install dependencies:
 
-   ```
-   composer install
-   ```
+    ```
+    composer install
+    ```
 
 3. Copy the `.env.example` file to `.env` and configure your environment variables:
 
-   ```
-   cp .env.example .env
-   ```
+    ```
+    cp .env.example .env
+    ```
 
 4. Generate application key:
 
-   ```
-   php artisan key:generate
-   ```
+    ```
+    php artisan key:generate
+    ```
 
 5. Run migrations and seeders:
-   ```
-   php artisan migrate --seed
-   ```
+    ```
+    php artisan migrate --seed
+    ```
 
 ## Docker Setup
 
@@ -58,9 +58,9 @@ This project includes a Docker configuration for easy setup. To use Docker:
 
 2. Build and start the containers:
 
-   ```
-   docker-compose up -d --build
-   ```
+    ```
+    docker-compose up -d --build
+    ```
 
 3. The application will be available at `http://localhost:8000`.
 
@@ -68,15 +68,15 @@ This project includes a Docker configuration for easy setup. To use Docker:
 
 The API routes are defined in the following files:
 
-- `routes/api.php`
-- `routes/user.php`
+-   `routes/api.php`
+-   `routes/user.php`
 
 ## Authentication
 
 This project uses Laravel Sanctum for API authentication. The authentication routes and controllers are located in:
 
-- `app/Http/Controllers/Api/Auth/AuthController.php`
-- `routes/api.php`
+-   `app/Http/Controllers/Api/Auth/AuthController.php`
+-   `routes/api.php`
 
 ## Authorization
 
